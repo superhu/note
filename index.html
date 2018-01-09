@@ -2,7 +2,28 @@
 <html>
   <head>
     <script src="http://139.199.194.237/mobileedu/js/jquery.min.js"></script>
+    <script src="http://139.199.194.237/mobileedu/js/doT.js" type="text/javascript"></script>
+
   </head>
 <h1>test</h1>
-  <script>console.log('test sciprt');</script>
+  <script type="text/x-dot-template" id="test_template">
+			<ul>
+				{{ for (var key in it) { }}
+					<li>{{=key}} : {{=it[key]}}</li>
+				{{ } }}
+			 <ul>	
+			</script>
+        <div id="test_div"></div>
+  
+  <script>
+	var template  = $('#test_template').text();
+	var obj={a:1,b:2};
+	var html = doT.template(template)(doT);
+	$('#test_div').html(html)
+    
+    
+    
+    $.post('app/myPaper/getAllPaperData.do',{studentId:60,paperId:102},function(ret){console.log(ret);})
+	</script>
+
 </html>
