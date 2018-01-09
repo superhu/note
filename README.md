@@ -4,4 +4,4 @@ test my blog
 
 ### Markdown
 
-[blog](superhu.github.io/note)
+[blog](https://superhu.github.io/note)
