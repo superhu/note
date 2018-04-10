@@ -10,9 +10,9 @@ xhr.onreadystatechange=function(){
 	}
 };
 
-xhr.open('post','http://192.168.0.209:8088/mobileedu/app/paperAnswer/getExamResult',true);
+xhr.open('get','https://api.github.com',true);
 xhr.setRequestHeader('Content-Type','application/json');
-xhr.send(JSON.stringify({id:153,a:[{b:{c:3}}]}))
+xhr.send();
   
   </script>
   
