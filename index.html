@@ -6,7 +6,7 @@
 xhr.onreadystatechange=function(){
 	if(xhr.readyState==4&&xhr.status==200){
 		console.log(xhr.responseText);
-    document.write(xhr.responseText);
+    //document.write(xhr.responseText);
 	}
 };
 
@@ -15,5 +15,19 @@ xhr.setRequestHeader('Content-Type','application/json');
 xhr.send();
   
   </script>
+	
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA6OYXVZZecd1SFArWqX_Tl4Idt1c4K4Dk",
+    authDomain: "hello-64dd8.firebaseapp.com",
+    databaseURL: "https://hello-64dd8.firebaseio.com",
+    projectId: "hello-64dd8",
+    storageBucket: "",
+    messagingSenderId: "228677205002"
+  };
+  firebase.initializeApp(config);
+</script>
   
 </html>
