@@ -2,8 +2,8 @@
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <h1>hello world!</h1>
  
-
-	
+<iframe src="https://webassembly.studio/?embed&f=xwi7sgffymh" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+	<div id="main"></div>	
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -22,7 +22,7 @@
 xhr.onreadystatechange=function(){
 	if(xhr.readyState==4&&xhr.status==200){
 		console.log(xhr.responseText);
-    document.write(xhr.responseText);
+    document.getElementById('main').innerHtml=xhr.responseText;
 	}
 };
 var url = 'https://78f4f733.ngrok.io/exam/list/page';
