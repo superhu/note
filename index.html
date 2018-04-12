@@ -1,20 +1,8 @@
 <html>
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <h1>hello world!</h1>
-  <script>
-  var xhr =new XMLHttpRequest();
-xhr.onreadystatechange=function(){
-	if(xhr.readyState==4&&xhr.status==200){
-		console.log(xhr.responseText);
-    //document.write(xhr.responseText);
-	}
-};
+ 
 
-xhr.open('get','https://api.github.com',true);
-xhr.setRequestHeader('Content-Type','application/json');
-xhr.send();
-  
-  </script>
 	
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <script>
@@ -28,6 +16,20 @@ xhr.send();
     messagingSenderId: "228677205002"
   };
   firebase.initializeApp(config);
-</script>
+
+	
+	  var xhr =new XMLHttpRequest();
+xhr.onreadystatechange=function(){
+	if(xhr.readyState==4&&xhr.status==200){
+		console.log(xhr.responseText);
+    document.write(xhr.responseText);
+	}
+};
+var url = 'https://78f4f733.ngrok.io/exam/list/page';
+xhr.open('get',,true);
+xhr.setRequestHeader('Content-Type','application/json');
+xhr.send();
+  
+  </script>
   
 </html>
