@@ -3,7 +3,7 @@
 用github pages托管前端页面,
 用apicloud为后台,搭建免费动态网站,试验中
 
-```
+```javascript
     var now = Date.now();  
     var appKey = sha1("A6067856527384"+"UZ"+"D0588DC0-4FA1-F9E5-7BD7-E97450CC40B7"+"UZ"+now)+"."+now;
     $.ajax({
