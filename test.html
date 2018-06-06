@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="https://rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+    <title>调用apicloud后端</title>
+</head>
+
+<body>
+    <h2>调用apicloud后端</h2>
+    <div id="data"></div>
+    <script>
+    $.ajax({
+    "url": "https://d.apicloud.com/mcm/api/comment?filter=%7B%22where%22%3A%7B%7D%2C%22skip%22%3A0%2C%22limit%22%3A20%7D",
+    "cache": false,
+    "headers": {
+        "X-APICloud-AppId": "A6067856527384",
+        "X-APICloud-AppKey": appKey
+    },
+    "type": "GET"
+    }).success(function(data, status, header) {
+        console.log(data, status, header);
+        $('#data').text(JSON.stringify(data));
+    }).fail(function(header, status, errorThrown) {
+        console.err(errorThrown);
+    })
+    </script>
+</body>
+
+</html>
